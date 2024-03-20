@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "description": "TS template.",
   "main": "src/index.ts",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "build": "npm run lint && rimraf dist/ && tsc",
+    "start": "npm run build && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/**/*.ts"
+  },
   "author": "Fikernew Birhanu <ffekirnew0808@gmail.com>",
   "license": "MIT",
   "devDependencies": {
